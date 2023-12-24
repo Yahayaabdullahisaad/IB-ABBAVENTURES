@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .invoice-input-about-company{
+            background-image:linear-gradient(to bottom,rgb(1, 1, 59) ,rgb(32, 6, 182) ,rgb(192, 192, 3),white );
+            border: 1px solid rgb(26, 6, 112);
+            margin: auto;
+            max-width: 400px;
+            border-radius: 20px;
+            height: 375px;
+            padding-top: 2px;
+        }
+        .invoice-input-about-company-container{
+            background-color: blue;
+            border: 1px solid black;
+            width: 400px;
+            height: 378px;
+            margin: auto;
+            border-radius: 20px;
+            padding: 4px;
+            position: fixed;
+            right: 10%; 
+            left: 10%;
+            top: 90px;
+            }
+        .invoice-input-hind{
+            border: none;
+            outline: none;
+            background-color: rgb(251, 84, 55);
+            width: 40px;
+            height: 40px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            z-index: 5;
+            opacity: 0;
+            transition: all 0.05s;
+        }
+        .invoice-input-hind:hover{
+            border-left:1px dashed rgb(255, 255, 255);
+            border-bottom: 1px dashed rgb(255, 255, 255);
+            opacity: 1;
+        }
+        .invoice-input-img-dealers-such-container{
+            width: 400px;
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .invoice-input-logo-div{
+            border: 1px dashed rgb(202, 202, 202);
+            max-width: 76px;
+            height: 76px;
+            margin-left: 10px;
+            border-radius: 50%;
+        }
+        .invoice-input-logo{
+            border: 2px groove rgb(8, 3, 56);
+            padding: 1px;
+            width: 70px;
+            height: 70px;
+            mix-blend-mode: normal;
+            border-radius: 50%;
+        }
+        .invoice-input-company-name{
+            margin: auto;
+            max-width: 370px;
+            height: 40px;
+            margin-top: -9px;
+            font-size: 35px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-shadow: 6px 2px 1px rgb(3, 0, 15);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: uppercase;
+        }
+        .invoice-input-company-discribtion{
+            margin: auto;
+            max-width: 265px;
+            height: 18px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            font-style: italic;
+            color: rgb(231, 235, 8);
+            text-shadow: 1px 1px 1px rgb(0, 0, 0);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: capitalize;
+        }
+        .invoice-input-item-discribtion{
+            margin: auto;
+            max-width: 300px;
+            height: 33px;
+            font-size: 13px;
+            font-style: oblique;
+            color: rgb(255, 255, 255);
+            text-shadow: 6px 2px 1px rgb(3, 0, 15);
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: capitalize;
+        }
+        .invoice-input-dealers-such{
+            margin: auto;
+            max-width: 280px;
+            margin-top: 0px;
+            height: 90px;
+        }
+        .invoice{
+            border: 1px groove rgb(253, 255, 253);
+            width: 75px;
+            height: 18px;
+            margin-top: 8px;
+            margin-left: 5px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: bold;
+            padding-bottom: 4px;
+            border-radius: 6px;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .invoice-input-name-address,.invoice-input-description-amountinwords-div{
+            width: 380px;
+            height: 40px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        .invoice-input-name,.invoice-input-address,.invoice-input-description,.invoice-input-amountinwords{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding-left: 4px;
+            color: rgb(54, 54, 54);
+            background-color: transparent;
+            border: 1px solid rgb(0, 60, 255);
+            width: 180px;
+            height: 35px;
+            outline: none;
+            border-radius: 8px;
+            
+        }
+        .invoice-input-name:focus,.invoice-input-address:focus,.invoice-input-description:focus,.invoice-input-amountinwords:focus{
+            outline: 1px solid rgb(0, 60, 255);
+        }
+        .invoice-input-name::placeholder,.invoice-input-address::placeholder,.invoice-input-description::placeholder,.invoice-input-amountinwords::placeholder{
+            text-transform: capitalize;
+            color: rgb(47, 45, 45);
+        }
+        .invoice-input-amount-quantity-rate-div,.invoice-input-deposit-none-balance-div{
+            width: 380px;
+            height: 30px;
+            margin: auto;
+            margin-top: 9px;
+        }
+        .invoice-input-amount,.invoice-input-quantity,.invoice-input-rate,.invoice-input-deposit,.invoice-input-none,.invoice-input-balance{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding-left: 5px;
+            color: rgb(54, 54, 54);
+            background-color: transparent;
+            border: 1px solid rgb(0, 60, 255);
+            width: 100px;
+            height: 28px;
+            outline: none;
+            border-radius: 8px;
+        }
+        .invoice-input-deposit,.invoice-input-none,.invoice-input-balance{
+            width: 110px;
+        }
+        .invoice-input-none{
+            width: 80px;
+        }
+        .invoice-input-amount:focus,.invoice-input-quantity:focus,.invoice-input-rate:focus,.invoice-input-deposit:focus,.invoice-input-balance:focus{
+            outline: 1px solid rgb(3, 3, 255);
+            
+        }
+        .invoice-input-amount::placeholder,.invoice-input-quantity::placeholder,.invoice-input-rate::placeholder,.invoice-input-deposit::placeholder,.invoice-input-balance::placeholder{
+            text-transform: capitalize;
+            color: rgb(66, 63, 63);
+        }
+        .invoice-input-quantity{
+            margin-left: 22px;
+            margin-right: 22px;
+        }
+        .invoice-input-none{
+            margin-left: 22px;
+            margin-right: 22px;
+            opacity: 0;
+        }
+        .invoice-input-add-invoice-div{
+            width: 150px;
+            margin: auto;
+            height: 40px;
+            margin-top: 10px;
+        }
+        .invoice-input-add-invoice{
+            background-color: blue;
+            width: 150px;
+            height: 40px;
+            text-transform: capitalize;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            transition: all 0.5s;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="invoice-input-about-company-container">
+        <div class="invoice-input-about-company">
+            <button class="invoice-input-hind">x</button>
+            <p class="invoice-input-company-name">ib @ abba ventures</p>
+            <div class="invoice-input-img-dealers-such-container">
+                <div class="invoice-input-logo-div">
+                    <img src="images/amazon-mobile-logo.png" alt="amazon-mobile-logo" class="invoice-input-logo">
+                </div>
+                <div class="invoice-input-dealers-such">
+                    <p class="invoice-input-company-discribtion">dealers in all kinds of foot wears</p>
+                    <p class="invoice-input-item-discribtion">such as nike,adidas,puma,gucci,supreme ,slides,fendy,off-white etc. </p>
+                    <div class="invoice">invoice</div>
+                </div>
+            </div>
+            <div class="invoice-input-name-address">
+                <input type="text" placeholder="name" class="invoice-input-name">
+                <input type="text" placeholder="address" class="invoice-input-address">
+            </div>
+            <div class="invoice-input-description-amountinwords-div">
+                <input type="text" placeholder="description of goods" class="invoice-input-description">
+                <input type="text" placeholder="amount in words" class="invoice-input-amountinwords">
+            </div>
+            <div class="invoice-input-amount-quantity-rate-div">
+                <input type="tel" placeholder="amount&#40&#8358&#41" class="invoice-input-amount">
+                <input type="tel" placeholder="quantity" class="invoice-input-quantity">
+                <input type="tel" placeholder="rate" class="invoice-input-rate">
+            </div>
+            <div class="invoice-input-deposit-none-balance-div">
+                <input type="tel" placeholder="deposit&#40&#8358&#41" class="invoice-input-deposit">
+                <input type="number" placeholder="" class="invoice-input-none">
+                <input type="tel" placeholder="balance&#40&#8358&#41" class="invoice-input-balance">
+            </div>
+            <div class="invoice-input-add-invoice-div">
+                <button class="invoice-input-add-invoice">add invoice</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

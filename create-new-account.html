@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .create-accout-about-company{
+            background-image:linear-gradient(to bottom,rgb(1, 1, 59) ,rgb(32, 6, 182) ,rgb(192, 192, 3),white );
+            border: 1px solid rgb(26, 6, 112);
+            margin: auto;
+            max-width: 400px;
+            border-radius: 20px;
+            height: 410px;
+            padding-top: 2px;
+        }
+        .create-accout-about-company-container{
+            background-color: blue;
+            border: 1px solid black;
+            width: 400px;
+            height: 412px;
+            margin: auto;
+            border-radius: 20px;
+            padding: 4px;
+            position: fixed;
+            right: 10%; 
+            left: 10%;
+            top: 90px;
+        }
+        .create-accout-hind{
+            border: none;
+            outline: none;
+            background-color: rgb(251, 84, 55);
+            width: 40px;
+            height: 40px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            z-index: 5;
+            opacity: 0;
+            transition: all 0.05s;
+        }
+        .create-accout-hind:hover{
+            border-left:1px dashed rgb(255, 255, 255);
+            border-bottom: 1px dashed rgb(255, 255, 255);
+            opacity: 1;
+        }
+        .create-accout-logo-div{
+            border: 1px dashed rgb(202, 202, 202);
+            max-width: 54px;
+            height: 54px;
+            margin: auto;
+            border-radius: 50%;
+        }
+        .create-accout-logo{
+            border: 2px groove rgb(8, 3, 56);
+            padding: 1px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+        .create-accout-company-name{
+            margin: auto;
+            max-width: 232px;
+            height: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-shadow: 6px 2px 1px rgb(3, 0, 15);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: uppercase;
+        }
+        .create-accout-company-discribtion{
+            margin: auto;
+            max-width: 195px;
+            height: 14px;
+            font-size: 10px;
+            font-weight: bold;
+            color: rgb(231, 235, 8);
+            text-shadow: 1px 1px 1px rgb(0, 0, 0);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: capitalize;
+        }
+        .create-accout-item-discribtion{
+            margin: auto;
+            max-width: 300px;
+            height: 33px;
+            font-size: 13px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-shadow: 6px 2px 1px rgb(3, 0, 15);
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: capitalize;
+        }
+        .create-accout-location{
+            margin: auto;
+            max-width: 310px;
+            height: 50px;
+            font-size: 12px;
+            font-weight: bold;
+            color: rgb(2, 9, 102);
+            text-shadow: 1px 1px 1px rgb(29, 29, 29);
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: capitalize;
+        
+        }
+        
+        .create-accout-first-name,.create-accout-last-name,.create-accout-phone,.create-accout-email{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding-left: 2px;
+            color: rgb(54, 54, 54);
+            border: 1px solid rgb(4, 21, 255);
+            outline: none;
+            background-color:transparent;
+            width: 180px;
+            height: 30px;
+            border-radius: 4px;
+            margin:4px auto;
+        }
+        .create-accout-first-name::placeholder,.create-accout-last-name::placeholder,.create-accout-phone::placeholder,.create-accout-email::placeholder,.create-accout-first-password::placeholder,.create-accout-last-password::placeholder{
+           text-transform: capitalize;
+           color: rgb(0, 0, 0);
+        }
+        .create-accout-first-name-last-name-div,.create-accout-phone-email-div{
+            width: 380px;
+            margin: auto;
+        }
+        
+        .create-accout-gender{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 185px;
+            height: 20px;
+            margin: auto;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: capitalize;
+            color: rgb(1, 1, 75);
+        }
+        .create-accout-male,.create-accout-female{
+            padding: 0px;
+            margin: 0px;
+            display: inline;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: capitalize;
+            font-size: 12px;
+            font-weight: normal;
+        }
+        .create-accout-all-password{
+            border: none;
+            height: 40px;
+            width: 380px;
+            margin: auto;
+        }
+        .create-accout-first-password,.create-accout-last-password{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding-left: 2px;
+            color: rgb(54, 54, 54);
+            border: 1px solid rgb(4, 4, 255);
+            outline: none;
+            background-color:transparent;
+            width: 180px;
+            height: 30px;
+            border-radius: 4px;
+            margin:4px auto;
+        }
+        .create-accout-first-password:focus,.create-accout-last-password:focus,.create-accout-first-name:focus,.create-accout-last-name:focus,.create-accout-phone:focus,.create-accout-email:focus{
+            outline: 2px solid rgb(20, 3, 255);
+            border: 1px solid rgb(17, 0, 250);
+        }
+        .create-accout-hind-password{
+            max-width: 15px;
+            height: 12px;
+            position: absolute;
+            margin-left: -22px;
+            margin-top: 16px;
+            border-radius: 10px;
+            mix-blend-mode: multiply;
+        }
+        .create-new-account-div{
+            max-width: 200px;
+            height: 40px;
+            margin: auto;
+        }
+        .create-new-account{
+            border: 1px solid black;
+            background-color: rgb(3, 3, 224);
+            width: 200px;
+            height: 40px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 9px;
+            font-size: 15px;
+            color: white;
+            
+        }
+        .create-accout-thanks-div{
+            width: 175px;
+            height: 20px;
+            margin: auto;
+            padding-top: 12px;
+            padding-bottom: 4px;
+            font-style:italic ;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="create-accout-about-company-container">
+        <div class="create-accout-about-company">
+            <button class="create-accout-hind">x</button>
+            <div class="create-accout-logo-div">
+                <img src="images/amazon-mobile-logo.png" alt="amazon-mobile-logo" class="create-accout-logo">
+            </div>
+            <p class="create-accout-company-name">ib @ abba ventures</p>
+            <p class="create-accout-company-discribtion">dealers in all kinds of foot wears</p>
+            <p class="create-accout-item-discribtion">such as nike,adidas,puma,gucci,supreme ,slides,fendy,off-white etc. </p>
+            <p class="create-accout-location"> no.15-16-26-27 m.s aliyu muhammad plaza gombe road opposite conoil central market kaduna nigeria &#127760www.ib@abbaventures.com &#128222 08093732220</p>
+            <div class="create-accout-first-name-last-name-div">
+                <input type="text" class="create-accout-first-name" placeholder="firstname">
+                <input type="text" class="create-accout-last-name" placeholder="lastname">
+            </div>
+            <div class="create-accout-phone-email-div">
+                <input type="tel" class="create-accout-phone" placeholder="phone number">
+                <input type="email" class="create-accout-email" placeholder="email">
+            </div>
+            
+            <div class="create-accout-gender">
+                gender:
+                <p class="create-accout-male">male <input type="radio" class="create-accout-male-radio"></p>
+                <p class="create-accout-female">female <input type="radio"class="create-accout-female-radio"></p>
+            </div>
+            <div class="create-accout-all-password">
+                <input type="password" class="create-accout-first-password" placeholder="password"><img src="images/icons/hind-password.jpg" alt="hind-password"class="create-accout-hind-password">
+                <input type="password" class="create-accout-last-password" placeholder="confirm password">
+            </div>
+            <div class="create-new-account-div">
+                <button class="create-new-account">create new account</button>
+            </div>
+            <div class="create-accout-thanks-div">thanks for your patronage</div>
+        </div >
+    </div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .login-about-company{
+            background-image:linear-gradient(to bottom,rgb(1, 1, 59) ,rgb(32, 6, 182) ,rgb(192, 192, 3),white );
+            border: 1px solid rgb(26, 6, 112);
+            margin: auto;
+            max-width: 400px;
+            height: 365px;
+            border-radius: 20px;
+            padding-top: 2px;
+        }
+        .login-about-company-container{
+            background-color: blue;
+            border: 1px solid black;
+            width: 400px;
+            height: 368px;
+            margin: auto;
+            border-radius: 20px;
+            padding: 4px;
+            position: fixed;
+            right: 10%; 
+            left: 10%;
+            top: 90px;
+        }
+        .login-about-hind{
+            border: none;
+            outline: none;
+            background-color: rgb(251, 84, 55);
+            width: 40px;
+            height: 40px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            z-index: 5;
+            opacity: 0;
+            transition: all 0.05s;
+        }
+        .login-about-hind:hover{
+            border-left:1px dashed rgb(255, 255, 255);
+            border-bottom: 1px dashed rgb(255, 255, 255);
+            opacity: 1;
+        }
+        .login-create-accout-logo-div{
+            border: 1px dashed rgb(202, 202, 202);
+            max-width: 54px;
+            height: 54px;
+            margin: auto;
+            border-radius: 50%;
+        }
+        .login-create-accout-logo{
+            border: 2px groove rgb(8, 3, 56);
+            padding: 1px;
+            max-width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+        .login-company-name{
+            margin: auto;
+            max-width: 232px;
+            height: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-shadow: 6px 2px 1px rgb(3, 0, 15);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: uppercase;
+        }
+        .login-company-discribtion{
+            margin: auto;
+            max-width: 195px;
+            height: 14px;
+            font-size: 10px;
+            font-weight: bold;
+            color: rgb(231, 235, 8);
+            text-shadow: 1px 1px 1px rgb(0, 0, 0);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: capitalize;
+        }
+        .login-item-discribtion{
+            margin: auto;
+            max-width: 300px;
+            height: 33px;
+            font-size: 13px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-shadow: 6px 2px 1px rgb(3, 0, 15);
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: capitalize;
+        }
+        .login-location{
+            margin: auto;
+            max-width: 310px;
+            height: 50px;
+            font-size: 12px;
+            font-weight: bold;
+            color: rgb(3, 7, 68);
+            text-shadow: 1px 1px 1px rgb(29, 29, 29);
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: capitalize;
+        
+        }
+        .login-email-password{
+            width: 380px;
+            height: 40px;
+            padding-top: 5px;
+            margin: auto;
+        }
+        .login-email-contact,.login-password{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding-left: 2px;
+            color: rgb(54, 54, 54);
+            border: 1px solid rgb(0, 4, 255);
+            outline: none;
+            background-color: transparent;
+            width: 180px;
+            height: 30px;
+            border-radius: 4px;
+            
+        }
+        .login-email-contact::placeholder,.login-password::placeholder{
+            text-transform: capitalize;
+            color: black;
+        }
+        .login-email-contact:focus,.login-password:focus{
+            outline: 1px solid rgb(3, 3, 255);
+        }
+        .login-hind-password{
+            max-width: 15px;
+            height: 12px;
+            position: absolute;
+            margin-left: -22px;
+            margin-top: 13px;
+            border-radius: 10px;
+            mix-blend-mode: multiply;
+        }
+
+        .login-create-div{
+            width: 200px;
+            height: 100px;
+            margin: auto;
+           
+        }
+        .login-thanks-div{
+            max-width: 175px;
+            height: 18px;
+            margin: auto;
+            padding-top: 0px;
+            padding-bottom: 10px;
+            font-style:italic ;
+            font-weight: bold;
+        }
+        .login-button{
+            border: none;
+            background-color: rgb(1, 1, 148);
+            width: 100px;
+            height: 37px;
+            border-radius: 8px;
+            margin-top: 12px;
+            font-size: 15px;
+            color: white;
+            display: block;
+            margin-left: 48px;
+            text-transform: capitalize;
+        }
+        .login-create-account{
+            border: none;
+            background-color: rgb(7, 7, 255);
+            width: 200px;
+            height: 40px;
+            border-radius: 8px;
+            margin-top: 16px;
+            font-size: 15px;
+            color: white;
+            display: block;
+            text-transform: capitalize;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="login-about-company-container">
+        <div class="login-about-company">
+            <button class="login-about-hind">x</button>
+            <div class="login-create-accout-logo-div">
+                <img src="images/amazon-mobile-logo.png" alt="login-amazon-mobile-logo" class="login-create-accout-logo">
+            </div>
+            <p class="login-company-name">ib @ abba ventures</p>
+            <p class="login-company-discribtion">dealers in all kinds of foot wears</p>
+            <p class="login-item-discribtion">such as nike,adidas,puma,gucci,supreme ,slides,fendy,off-white etc. </p>
+            <p class="login-location"> no.15-16-26-27 m.s aliyu muhammad plaza gombe road opposite conoil central market kaduna nigeria &#127760www.ib@abbaventures.com &#128222 08093732220</p>
+            <div class="login-email-password">
+                <input type="text" placeholder="email/phone number" class="login-email-contact">
+                <input type="password" placeholder="password"class="login-password"><img src="images/icons/hind-password.jpg" alt="hind-password"class="login-hind-password">
+            </div>
+            <div class="login-create-div">
+                <button class="login-button">login</button>
+                <button class="login-create-account">create new account</button>
+            </div>
+            <div class="login-thanks-div">thanks for your patronage</div>
+        </div>
+    </div >
+</body>
+</html>

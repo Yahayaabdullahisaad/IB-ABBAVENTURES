@@ -1,0 +1,153 @@
+.add-product{
+    background-image:linear-gradient(to bottom,rgb(1, 1, 59) ,rgb(32, 6, 182) ,rgb(192, 192, 3),white );
+    border: 1px solid rgb(26, 6, 112);
+    margin: auto;
+    max-width: 400px;
+    height: 300px;
+    border-radius: 20px;
+}
+.add-product-container{
+    background-color: blue;
+    border: 1px solid black;
+    width: 400px;
+    height: 310px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 4px;
+    position: fixed;
+    right: 10%; 
+    left: 10%;
+    top: 90px;
+    z-index: 2;
+}
+.add-product-hind{
+    border: none;
+    outline: none;
+    background-color: rgb(251, 84, 55);
+    width: 40px;
+    height: 40px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    z-index: 5;
+    opacity: 0;
+    transition: all 0.05s;
+}
+.add-product-hind:hover{
+    border-left:1px dashed rgb(255, 255, 255);
+    border-bottom: 1px dashed rgb(255, 255, 255);
+    opacity: 1;
+}
+.add-image-div{
+    border: 1px dashed rgb(202, 202, 202);
+    max-width: 126px;
+    height: 113px;
+    margin: 20px auto;
+    border-radius: 10%;
+    position: relative;
+}
+.add-image-div::after{
+    content:"+";
+    background-color: rgb(255, 72, 0);
+    border: 1px dashed rgb(202, 202, 202);
+    width: 18px;
+    height: 19px;
+    position: absolute;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    left: 50px;
+    color: white;
+    bottom: -9px;
+    border-radius: 50%;
+}
+.add-image{
+    border: 2px groove rgb(8, 3, 56);
+    padding: 1px;
+    width: 123px;
+    height: 110px;
+    border-radius: 10%;
+}
+.add-image-file{
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    left: 44px;
+    bottom: -8px;
+    z-index: 2;
+    border-radius: 50%;
+    opacity: 0;
+}
+.add-name-description{
+    width: 380px;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+}
+.add-product-name,.add-product-description{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 5px;
+    color: rgb(54, 54, 54);
+    background-color: transparent;
+    border: 1px solid rgb(0, 60, 255);
+    width: 182px;
+    height: 35px;
+    outline: none;
+    border-radius: 8px;
+    
+}
+.add-product-name:focus,.add-product-description:focus{
+    outline: 1px solid rgb(0, 60, 255);
+}
+.add-product-name::placeholder,.add-product-description::placeholder{
+    text-transform: capitalize;
+    color: rgb(47, 45, 45);
+}
+.price-rating-count-div{
+    width: 380px;
+    height: 30px;
+    margin: auto;
+    margin-top: 9px;
+}
+.add-price,.add-rating,.add-count{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 5px;
+    color: rgb(54, 54, 54);
+    background-color: transparent;
+    border: 1px solid rgb(0, 60, 255);
+    width: 100px;
+    height: 28px;
+    outline: none;
+    border-radius: 8px;
+}
+.add-price:focus,.add-rating:focus,.add-count:focus{
+    outline: 1px solid rgb(3, 3, 255);
+    
+}
+.add-price::placeholder,.add-rating::placeholder,.add-count::placeholder{
+    text-transform: capitalize;
+    color: rgb(66, 63, 63);
+}
+.add-rating{
+    margin-left: 27px;
+    margin-right: 27px;
+}
+.add-new-button-div{
+    width: 200px;
+    margin: 20px auto;
+    height: 40px;
+}
+.add-new-button{
+    background-color: blue;
+    width: 200px;
+    height: 40px;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
